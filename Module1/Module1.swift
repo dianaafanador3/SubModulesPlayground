@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-let appId = "testappdiana-drmda"
+let appId = ""
 let app = RealmSwift.App(id: appId)
 
 public class Dog: Object {
@@ -24,22 +24,22 @@ public class Dog: Object {
 
 public class RealmWrapper {
     public static func handleError() async throws {
-        app.syncManager.errorHandler = { (error, _) in
-            if let error = error as? SyncError {
-                let (_, errorToken) = error.clientResetInfo()!
-                SyncSession.immediatelyHandleError(errorToken, syncManager: app.syncManager)
-            }
-        }
-        let user = try await app.login(credentials: .anonymous)
-        do {
-            var configuration = user.configuration(partitionValue: "myPartition")
-            configuration.objectTypes = [Dog.self]
-            let realm = try await Realm(configuration: configuration)
-            let count = realm.objects(Dog.self).count
-            print(count)
-        } catch {
-            print(error)
-        }
+//        app.syncManager.errorHandler = { (error, _) in
+//            if let error = error as? SyncError {
+//                let (_, errorToken) = error.clientResetInfo()!
+//                SyncSession.immediatelyHandleError(errorToken, syncManager: app.syncManager)
+//            }
+//        }
+//        let user = try await app.login(credentials: .anonymous)
+//        do {
+//            var configuration = user.configuration(partitionValue: "myPartition")
+//            configuration.objectTypes = [Dog.self]
+//            let realm = try await Realm(configuration: configuration)
+//            let count = realm.objects(Dog.self).count
+//            print(count)
+//        } catch {
+//            print(error)
+//        }
     }
 
     public static func save() throws {

@@ -12,8 +12,6 @@
 		ACDAA87B28783B7500FC31DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDAA87A28783B7500FC31DC /* Assets.xcassets */; };
 		ACDAA87E28783B7500FC31DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDAA87D28783B7500FC31DC /* Preview Assets.xcassets */; };
 		ACDAA88C28783B8800FC31DC /* Module1.h in Headers */ = {isa = PBXBuildFile; fileRef = ACDAA88B28783B8800FC31DC /* Module1.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACDAA88F28783B8800FC31DC /* Module1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDAA88928783B8800FC31DC /* Module1.framework */; };
-		ACDAA89028783B8800FC31DC /* Module1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACDAA88928783B8800FC31DC /* Module1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACDAA89628783B9300FC31DC /* Module1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAA89528783B9300FC31DC /* Module1.swift */; };
 		ACDAA89E28783BD200FC31DC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = ACDAA89D28783BD200FC31DC /* Realm */; };
 		ACDAA8A028783BD200FC31DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACDAA89F28783BD200FC31DC /* RealmSwift */; };
@@ -21,10 +19,21 @@
 		ACDAA8B22878446300FC31DC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = ACDAA8B12878446300FC31DC /* Realm */; };
 		ACDAA8B42878446300FC31DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACDAA8B32878446300FC31DC /* RealmSwift */; };
 		ACDAA8B62878447F00FC31DC /* Module2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAA8B52878447F00FC31DC /* Module2.swift */; };
+		ACDAA8BB2878476C00FC31DC /* Module2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDAA8A62878445D00FC31DC /* Module2.framework */; };
+		ACDAA8BC2878476C00FC31DC /* Module2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACDAA8A62878445D00FC31DC /* Module2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACDAA8C328784B3800FC31DC /* Module1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDAA88928783B8800FC31DC /* Module1.framework */; };
+		ACDAA8C428784B3800FC31DC /* Module1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACDAA88928783B8800FC31DC /* Module1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ACDAA88D28783B8800FC31DC /* PBXContainerItemProxy */ = {
+		ACDAA8BD2878476C00FC31DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACDAA86B28783B7400FC31DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACDAA8A52878445D00FC31DC;
+			remoteInfo = Module2;
+		};
+		ACDAA8C528784B3800FC31DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ACDAA86B28783B7400FC31DC /* Project object */;
 			proxyType = 1;
@@ -40,7 +49,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACDAA89028783B8800FC31DC /* Module1.framework in Embed Frameworks */,
+				ACDAA8C428784B3800FC31DC /* Module1.framework in Embed Frameworks */,
+				ACDAA8BC2878476C00FC31DC /* Module2.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACDAA88F28783B8800FC31DC /* Module1.framework in Frameworks */,
+				ACDAA8C328784B3800FC31DC /* Module1.framework in Frameworks */,
+				ACDAA8BB2878476C00FC31DC /* Module2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +201,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				ACDAA88E28783B8800FC31DC /* PBXTargetDependency */,
+				ACDAA8BE2878476C00FC31DC /* PBXTargetDependency */,
+				ACDAA8C628784B3800FC31DC /* PBXTargetDependency */,
 			);
 			name = SupportModuleApp2;
 			packageProductDependencies = (
@@ -344,10 +356,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ACDAA88E28783B8800FC31DC /* PBXTargetDependency */ = {
+		ACDAA8BE2878476C00FC31DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACDAA8A52878445D00FC31DC /* Module2 */;
+			targetProxy = ACDAA8BD2878476C00FC31DC /* PBXContainerItemProxy */;
+		};
+		ACDAA8C628784B3800FC31DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ACDAA88828783B8800FC31DC /* Module1 */;
-			targetProxy = ACDAA88D28783B8800FC31DC /* PBXContainerItemProxy */;
+			targetProxy = ACDAA8C528784B3800FC31DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
