@@ -32,7 +32,9 @@ public class RealmWrapper {
         }
         let user = try await app.login(credentials: .anonymous)
         do {
-            let realm = try await Realm(configuration: user.configuration(partitionValue: "myPartition"))
+            var configuration = user.configuration(partitionValue: "myPartition")
+            configuration.objectTypes = [Dog.self]
+            let realm = try await Realm(configuration: configuration)
             let count = realm.objects(Dog.self).count
             print(count)
         } catch {

@@ -30,6 +30,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Module2.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>SupportModuleApp2.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
